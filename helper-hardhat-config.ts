@@ -9,6 +9,7 @@ export interface networkConfigItem {
     raffleEntranceFee?: BigNumber
     callbackGasLimit?: string 
     vrfCoordinatorV2?: string
+    mintFee?:string
   }
   
 export interface networkConfigInfo {
@@ -23,6 +24,7 @@ export const networkConfig: networkConfigInfo = {
         keepersUpdateInterval: "30",
         raffleEntranceFee: ethers.utils.parseEther("0.01"), // 0.01 ETH
         callbackGasLimit: "500000", // 500,000 gas
+        mintFee: "10000000000000000", // 0.01 ETH
     },
     11155111: {
         name: "sepolia",
@@ -31,11 +33,13 @@ export const networkConfig: networkConfigInfo = {
         keepersUpdateInterval: "30",
         raffleEntranceFee: ethers.utils.parseEther("0.01"), // 0.01 ETH
         callbackGasLimit: "500000", // 500,000 gas
-        vrfCoordinatorV2: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625"
+        vrfCoordinatorV2: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625",
+        mintFee: "10000000000000000", // 0.01 ETH
     },
     1: {
         name: "mainnet",
         keepersUpdateInterval: "30",
+        mintFee: "10000000000000000", // 0.01 ETH
     },
 }
 
