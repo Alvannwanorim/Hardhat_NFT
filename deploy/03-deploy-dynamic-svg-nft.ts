@@ -25,8 +25,8 @@ const deploy: DeployFunction = async function () {
 
   log("---------------------------------------");
 
-  const args = [ethUsedPriceAddress, lowSVG, highSVG];
-  const dynamicSvgNft = await deploy("DyanamicSvgNft", {
+  const args = [lowSVG, highSVG, ethUsedPriceAddress];
+  const dynamicSvgNft = await deploy("DynamicSvgNft", {
     from: deployer,
     args: args,
     log: true,
@@ -42,4 +42,4 @@ const deploy: DeployFunction = async function () {
 
 export default deploy;
 
-deploy.tags = ["all", "dyanmicsvg", "main"];
+deploy.tags = ["all", "dynamicsvg", "main"];
